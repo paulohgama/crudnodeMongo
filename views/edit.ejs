@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar</title>
+</head>
+
+<body>
+    <h2>
+        Editar Registros
+    </h2>
+    <% data.forEach(function(details) {%>
+        <form action="/edit/<%= details._id %>" method="post">
+            <input type="text" name="name" value="<%= details.name %>">
+            <input type="text" name="surname" value="<%= details.surname %>">
+            <br/>
+            <button><a href="/">Todos</a></button>
+            <button type="submit">Alterar</button>
+        </form>
+    <%})%>
+</body>
+
+</html>
